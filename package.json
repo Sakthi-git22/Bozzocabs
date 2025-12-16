@@ -1,8 +1,7 @@
 {
   "name": "bozzocabs",
   "private": true,
-  "homepage":""
-  "version": "0.0.0",
+  "homepage":"",
   "type": "module",
   "scripts": {
     "dev": "vite",

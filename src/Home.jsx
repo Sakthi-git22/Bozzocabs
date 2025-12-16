@@ -78,76 +78,85 @@ const Navbar = () => {
 const HeroSection = () => {
   return (
     <section className="relative w-full min-h-[900px] bg-[#121212] overflow-hidden">
+      {/* Background Elements */}
       <div className="absolute inset-0 opacity-5 bg-[radial-gradient(137.89%_137.89%_at_-4700%_-4700%,#3CFF14_0.91%,rgba(60,255,20,0)_0.91%)] pointer-events-none"></div>
       <div className="absolute inset-0 bg-[linear-gradient(135deg,#121212_0%,#121212_50%,rgba(18,18,18,0.8)_100%)] pointer-events-none"></div>
 
-      <div className="absolute top-[150px] md:top-[176px] left-6 right-6 md:left-20 md:right-20 flex flex-col md:flex-row items-center justify-between gap-12 z-10">
-        <div className="flex flex-col gap-6 max-w-[660px] flex-1">
-          <h1 className="text-white font-bold text-[40px] md:text-[60px] leading-[1.1]">
-            The Best Way To Get Cab, Wherever You're Going
-          </h1>
-          <p className="text-white/70 text-[16px] md:text-[20px] leading-[28px] max-w-[576px]">
-            Book reliable and comfortable rides instantly. Professional drivers,
-            transparent pricing, and seamless experience at your fingertips.
-          </p>
-           <div className="flex flex-row gap-4 mt-6 items-center">
+      {/* Main Container Wrapper */}
+      <div className="container mx-auto px-4 md:px-8 relative z-10 pt-[150px] md:pt-[176px]">
+        
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          
+          {/* Left Content */}
+          <div className="flex flex-col gap-6 max-w-[660px] flex-1">
+            <h1 className="text-white font-bold text-[40px] md:text-[60px] leading-[1.1]">
+              The Best Way To Get Cab, Wherever You're Going
+            </h1>
+            <p className="text-white/70 text-[16px] md:text-[20px] leading-[28px] max-w-[576px]">
+              Book reliable and comfortable rides instantly. Professional drivers,
+              transparent pricing, and seamless experience at your fingertips.
+            </p>
 
-  {/* App Store Button */}
-  <button
-    type="button"
-    className="group bg-black  transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 border-2 border-white rounded-lg"
-    aria-label="Download on the App Store"
-  >
-    <img 
-      src="/apple.png" 
-      alt="App Store" 
-      className="h-[50px] w-auto object-contain transition-all duration-300 group-hover:invert" 
-    />
-  </button>
+            {/* Buttons */}
+            <div className="flex flex-row gap-4 mt-6 items-center">
+              {/* App Store Button */}
+              <button
+                type="button"
+                className="group bg-black transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 border-2 border-white rounded-lg"
+                aria-label="Download on the App Store"
+              >
+                <img
+                  src="/apple.png"
+                  alt="App Store"
+                  className="h-[50px] w-auto object-contain transition-all duration-300 group-hover:invert"
+                />
+              </button>
 
-  {/* Play Store Button */}
-  <button
-    type="button"
-    className="group bg-black  transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 border-2 border-white rounded-lg"
-    aria-label="Get it on Google Play"
-  >
-    <img 
-      src="/playstore.png" 
-      alt="Google Play" 
-      className="h-[50px] w-auto object-contain transition-all duration-300 group-hover:invert" 
-    />
-  </button>
-
-</div>
-
-          <div className="flex flex-wrap gap-8 pt-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-[rgba(60,255,20,0.1)] flex items-center justify-center border border-transparent">
-                <div className="w-6 h-6 border-2 border-[#3CFF14] rounded-full"></div>
-              </div>
-              <div>
-                <div className="text-white font-bold text-[24px]">4.9</div>
-                <div className="text-white/60 text-[14px]">User Rating</div>
-              </div>
+              {/* Play Store Button */}
+              <button
+                type="button"
+                className="group bg-black transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 border-2 border-white rounded-lg"
+                aria-label="Get it on Google Play"
+              >
+                <img
+                  src="/playstore.png"
+                  alt="Google Play"
+                  className="h-[50px] w-auto object-contain transition-all duration-300 group-hover:invert"
+                />
+              </button>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-[rgba(60,255,20,0.1)] flex items-center justify-center">
-                <div className="w-6 h-6 border-2 border-[#3CFF14] rounded-full"></div>
+
+            {/* Stats / Ratings */}
+            <div className="flex flex-wrap gap-8 pt-6">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-[rgba(60,255,20,0.1)] flex items-center justify-center border border-transparent">
+                  <div className="w-6 h-6 border-2 border-[#3CFF14] rounded-full"></div>
+                </div>
+                <div>
+                  <div className="text-white font-bold text-[24px]">4.9</div>
+                  <div className="text-white/60 text-[14px]">User Rating</div>
+                </div>
               </div>
-              <div>
-                <div className="text-white font-bold text-[24px]">100K+</div>
-                <div className="text-white/60 text-[14px]">Safe Rides</div>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-[rgba(60,255,20,0.1)] flex items-center justify-center">
+                  <div className="w-6 h-6 border-2 border-[#3CFF14] rounded-full"></div>
+                </div>
+                <div>
+                  <div className="text-white font-bold text-[24px]">100K+</div>
+                  <div className="text-white/60 text-[14px]">Safe Rides</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="hidden md:flex flex-1 justify-end items-center relative">
-            <img 
-                src="public/header.jpg"
-                alt="Cab Service Hero" 
-                className="w-[100px] md:w-[500px] h-auto object-contain drop-shadow-[0_0_30px_rgba(60,255,20,0.15)]"
+          {/* Right Image */}
+          <div className="hidden md:flex flex-1 justify-end items-center relative">
+            <img
+              src="/header.jpg" // Removed 'public' prefix (standard practice for React/Next.js)
+              alt="Cab Service Hero"
+              className="w-[100px] md:w-[500px] h-auto object-contain drop-shadow-[0_0_30px_rgba(60,255,20,0.15)]"
             />
+          </div>
         </div>
       </div>
     </section>
@@ -546,9 +555,9 @@ const Footer = () => {
             <h4 className="text-white text-lg font-bold">Company</h4>
 
             <ul className="flex flex-col gap-3">
-              <li><a className="text-white/60 hover:text-[#3CFF14] transition-colors" href="#">About Us</a></li>
-              <li><a className="text-white/60 hover:text-[#3CFF14] transition-colors" href="#">Features</a></li>
-              <li><a className="text-white/60 hover:text-[#3CFF14] transition-colors" href="#">Contact Us</a></li>
+              <li><a className="text-white/60 hover:text-[#3CFF14] transition-colors" href="#about">About Us</a></li>
+              <li><a className="text-white/60 hover:text-[#3CFF14] transition-colors" href="#features">Features</a></li>
+              <li><a className="text-white/60 hover:text-[#3CFF14] transition-colors" href="#contact">Contact Us</a></li>
             </ul>
           </div>
 
